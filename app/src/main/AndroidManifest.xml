@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arhiser.todolist">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Lab6"
+        android:name=".App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".screens.main.MainActivity"
+            android:label="Lab6"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".screens.details.NoteDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <service
+            android:name=".EgorService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":orgnotif" />
+    </application>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+</manifest>
